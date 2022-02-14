@@ -1,0 +1,17 @@
+<table>
+  <thead>
+    <tr class="position-relative">
+      <th>name</th>
+      <th>Company</th>
+      <th>City</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr  *ngFor="let data of data;index as i; even as e; last as l" bind-attr.last="l" bind-attr.data-sort="e">
+       
+      <th>  {{ data.name }}</th>
+      <th> {{ data.company.name }}</th>
+      <th> {{ data.address.city }}</th>
+    </tr>
+  </tbody>
+</table>

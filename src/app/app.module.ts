@@ -6,8 +6,10 @@ import { CoursesServices } from './services.component';
 import { AuthorsComponent } from './authors/authors.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
-import { HttpExampleObservableComponent } from './http-example-observable/http-example-observable.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NgIfElseComponent } from './ng-if-else/ng-if-else.component';
+import { NgSwitchComponent } from './ng-switch/ng-switch.component';
+import { NgForComponent } from './ng-for/ng-for.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,7 +17,9 @@ import { HttpClientModule } from '@angular/common/http';
     AuthorsComponent,
     NavbarComponent,
     HomeComponent,
-    HttpExampleObservableComponent,
+    NgIfElseComponent,
+    NgSwitchComponent,
+    NgForComponent,
   ],
   imports: [BrowserModule, HttpClientModule],
   providers: [CoursesServices],

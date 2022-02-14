@@ -1,0 +1,13 @@
+<div *ngIf="condition; then thenBlock; else elseBlock"></div>
+<ng-template #thenBlock>
+  {{ displayname() }}
+</ng-template>
+<ng-template #elseBlock>
+  {{ showLoginMessage() }}
+</ng-template>
+
+<button (click)="show = !show">{{ show ? "clicked" : "click" }}</button>
+<div *ngIf="show">Text to show</div>
+
+<div *ngIf="condition as value">{{ value }}</div>
+<ng-template #elseBlock>Content to render when value is null.</ng-template>

@@ -10,7 +10,7 @@ table thead tr{
   position: relative;
 }
 table thead tr th::after {
-  content: "att";
+  content: "~";
   margin: 0 10px;
   border-radius: 100%;
   background-color: rgb(119, 86, 86);
@@ -33,4 +33,10 @@ th {
 
 tr:nth-child(even) {
   background-color: #dddddd;
+}
+.even{
+  background-color: #00ffff;
+}
+.odd{
+  background-color: #faebd7;
 }

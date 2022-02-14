@@ -7,11 +7,11 @@
     </tr>
   </thead>
   <tbody>
-    <tr  *ngFor="let data of data;index as i; even as e; last as l" bind-attr.last="l" bind-attr.data-sort="e">
+    <tr  *ngFor="let data of parentData;index as i; even as e; last as l" bind-attr.last="l" [class]="e ? 'even' : 'odd'">
        
-      <th>  {{ data.name }}</th>
-      <th> {{ data.company.name }}</th>
-      <th> {{ data.address.city }}</th>
+      <td>  {{ data.name }}</td>
+      <td> {{ data.company.name }}</td>
+      <td> {{ data.address.city }}</td>
     </tr>
   </tbody>
 </table>

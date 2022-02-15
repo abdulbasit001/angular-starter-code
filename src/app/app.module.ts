@@ -12,6 +12,8 @@ import { NgSwitchComponent } from './ng-switch/ng-switch.component';
 import { NgForComponent } from './ng-for/ng-for.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
+import { MatBadgeModule } from '@angular/material/badge';
+import { PipesComponent } from './pipes/pipes.component';
 
 @NgModule({
   declarations: [
@@ -23,12 +25,14 @@ import { MatSliderModule } from '@angular/material/slider';
     NgIfElseComponent,
     NgSwitchComponent,
     NgForComponent,
+    PipesComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
     MatSliderModule,
+    MatBadgeModule,
   ],
   providers: [CoursesServices],
   bootstrap: [AppComponent],

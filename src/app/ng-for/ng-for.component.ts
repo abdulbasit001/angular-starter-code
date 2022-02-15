@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, Output, OnInit, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-ng-for',
@@ -7,7 +7,13 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class NgForComponent implements OnInit {
   @Input('data') public parentData: any;
+  @Output() public childEvent = new EventEmitter();
+  public isClicked = false;
   constructor() {}
 
   ngOnInit(): void {}
+  fireEvent() {
+    this.isClicked = !this.isClicked;
+    this.childEvent.emit(this.isClicked);
+  }
 }

@@ -239,7 +239,9 @@ export class AppComponent implements OnInit {
   ];
   title = 'Angular App';
   name = 'hello';
+  username = { name: 'abdul basit' };
   public example = [];
+  public message = '';
   constructor() {}
   click() {}
   ngOnInit(): void {}

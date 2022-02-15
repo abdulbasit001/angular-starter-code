@@ -10,6 +10,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgIfElseComponent } from './ng-if-else/ng-if-else.component';
 import { NgSwitchComponent } from './ng-switch/ng-switch.component';
 import { NgForComponent } from './ng-for/ng-for.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule } from '@angular/material/slider';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +24,12 @@ import { NgForComponent } from './ng-for/ng-for.component';
     NgSwitchComponent,
     NgForComponent,
   ],
-  imports: [BrowserModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatSliderModule,
+  ],
   providers: [CoursesServices],
   bootstrap: [AppComponent],
 })

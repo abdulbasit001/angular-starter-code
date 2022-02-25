@@ -1,0 +1,30 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Username</th>
+      <th>email</th>
+      <th>Address</th>
+      <th>Phone</th>
+      <th>website</th>
+      <th>Company</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employees">
+      <th>{{ employee.name }}</th>
+      <th>{{ employee.username }}</th>
+      <th>{{ employee.email }}</th>
+      <th>
+        {{
+          employee.address.street +
+            employee.address.suite +
+            employee.address.city
+        }}
+      </th>
+      <th>{{ employee.phone }}</th>
+      <th>{{ employee.website }}</th>
+      <th>{{ employee.company.name }}</th>
+    </tr>
+  </tbody>
+</table>
